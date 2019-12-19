@@ -1,8 +1,12 @@
+#author: @adithya8
+
 declare -a msg=(14 36 64 118 207 386)
 declare -a title=(6 14 26 47 83 154)
 declare -a msgK=(14 36 71 143 286 357 495)
 declare -a titleK=(6 14 29 57 114 143 198)
-declare -a totK=(20 50 100 200 300 400 500 600 700)
+declare -a totK=(16 32 64 128 256 512 1024 2048)
+declare -a totK_=( )
+
 
 # Last array index shouldn't apply for XLNet
 
@@ -21,9 +25,10 @@ else
     exit
 fi
 
-if [ "$1" -eq "18" ]; 
+if [ "$1" -ne "19" ]; 
 then
-    msgK=${totK}
+    msgK=( "${totK[@]}" )
+    titleK=( "${totK_[@]}" )
 fi
 
 arraylength=${#msgK[@]}
@@ -34,6 +39,6 @@ do
     eval "bash ~/NLP/ContextualEmbeddingDR/${contextualEmbedding}DimRedExp.sh ${experiment} ${dimRedModel} ${msgK[$i-1]} ${titleK[$i-1]}"
 done
 
-echo "f1 scores for increasing k sizes"
+#echo "f1 scores for increasing k sizes"
 #eval  "cat ./results/XLNet_${dimRedModel}/* | grep \'f1\':"
-eval "python ~/NLP/ContextualEmbeddingDR/tableMaker.py ${experiment} ${contextualEmbedding} ${dimRedModel}"
+#eval "python ~/NLP/ContextualEmbeddingDR/tableMaker.py ${experiment} ${contextualEmbedding} ${dimRedModel}"
