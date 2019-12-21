@@ -12,6 +12,7 @@
     │   ├── autoencoder.py                       # Runs autoencoder
     │   ├── kmeans.py                            # Kmeans algorithm implemented here
     │   ├── xlnet_kmeans.sh                      # Runs kmeans on the four tables(task_A, task_A_title, task_Cfil, task_Cfil_title)
+    │   ├── bert_kmeans.sh                      # Runs kmeans on the four tables(task_A, task_A_title, task_Cfil, task_Cfil_title)
     │   ├── clp19_bert_kmeans_results.sh         # Generates all the results on bert features using kmeans
     │   └── clp19_xlnet_kmeans_results.sh        # Generates all the results on xlnet features using kmeans
     ├── fb20                    
