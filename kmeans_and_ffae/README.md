@@ -5,7 +5,7 @@
     │   ├── autoencoder.py                       # Runs autoencoder
     │   ├── clp18_bert_ffae_results.sh           # Generates all the results on bert features using ffae
     │   └── clp18_xlnet_ffae_results.sh          # Generates all the results on xlnet features using ffae
-    ├── clp19                    # Test files (alternatively `spec` or `tests`)
+    ├── clp19                    
     │   ├── autoencoder.py                       # Runs autoencoder
     │   ├── clp18_bert_ffae_results.sh           # Generates all the results on bert features using ffae
     │   ├── clp18_xlnet_ffae_results.sh          # Generates all the results on xlnet features using ffae
