@@ -34,7 +34,7 @@ Dimensionality Reduction Techniques(dr)<br/>
     1. kmeans<br/>
     2. ffae<br/>
     
-In each of the directory there is a file named(in the format) task_ce_dr_results.sh
+In each of the directory there is a file named(in the format) task_ce_dr_results.sh. This runs the dimensionality reduction on the specified contextual embedding of a task for various k values given by the array in the first line of the .sh file
 Example command:
 
     bash task_ce_dr_results.sh
