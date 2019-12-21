@@ -39,4 +39,7 @@ Example command:
 
     bash task_ce_dr_results.sh
     
-Upon running the above command it will generate .pickle and .txt (containing results of testing) in the /data/aravula/dr_pickles/ folder with names ce_dr_messagereducedsize_titlereducedsize_task.pickle and ce_dr_messagereducedsize_titlereducedsize_task.txt respectively.
+The results of the command are:
+
+    Upon running the above command it will generate .pickle and .txt (containing results of testing) in the /data/aravula/dr_pickles/ folder with names ce_dr_messagereducedsize_titlereducedsize_task.pickle and ce_dr_messagereducedsize_titlereducedsize_task.txt respectively.
+
