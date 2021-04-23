@@ -2,6 +2,19 @@
 
 ## Readme 
 
+
+| Number of training samples | Demographic Tasks | Personality Tasks | Mental Health Tasks |
+| -------------------------- | :---------------: | :---------------: | :-----------------: |
+| 50                         | 16                | 16                | 16                  |
+| 100			     | 128		 | 16		     | 22		   |
+| 200			     | 512		 | 32		     | 45		   |
+| 500			     | 768		 | 64		     | 64		   |
+| 1000			     | 768		 | 90 		     | 64		   |
+
+This work is intended to inform researchers in Computational Social Science a simple way to improve the performance of transformer based models. We find that training PCA on transformer representations using the domain data improves the model performance overall, with evidence of handling longer sequences better than other reduction methods.
+The table above presents a summary of systematic experiments, recommmending the number of dimensions required for given number of samples in each task domain to achieve the best performance.
+
+
 The repository contains shell scripts that uses the BERT / XLNet contextual embeddings to produce the results on train (Cross validated) and the test set for three tasks.
 
 - Task 1: CLPsych 2018 task, referred as 18.
