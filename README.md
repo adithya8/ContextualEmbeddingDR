@@ -1,14 +1,6 @@
 # **Empirical Evaluation of Pre-trained Transformers for Human-Level NLP: The Role of Sample Size and Dimensionality**
 
-## *Adithya V Ganesan, 112683104*
-
-----
-
-The FB dataset detailed in the report was used for this project. The data was dumped in MySQL in order to conduct all the experiments using [DLATK](https://github.com/dlatk/dlatk), a language toolkit. This README file contains the command logs to collect the results for the experiments. All the commands except for the transformer embedding generation was executed by switching to the "dev" branch. The said embedding generation commands were executed checkingout to "dev-transformers" branch.
-
-The messages for domain data was stored in table named D_20 and task data in a table named T_20. The outcomes (age, gen, ext, ope) were stored in a table named 20_outcomes. The database will be referred as "db".
-
----- 
+---
 
 ### **Commands to extract RoBERTa embeddings:**
 
@@ -57,3 +49,14 @@ This command would store the evaluation result for the ten runs in output.txt.
 For classification task the commands have a slight variation. The outcomes fag is changed to appropriate categorical column name. The `--train_reg` and `--predict_reg` are changed to `--train_classifiers` and `--predict_classifiers` respectively. 
 
 ----
+
+| Number of training samples | Demographic Tasks | Personality Tasks | Mental Health Tasks |
+| -------------------------- | :---------------: | :---------------: | :-----------------: |
+| 50                         | 16                | 16                | 16                  |
+| 100			     | 128		 | 16		     | 22		   |
+| 200			     | 512		 | 32		     | 45		   |
+| 500			     | 768		 | 64		     | 64		   |
+| 1000			     | 768		 | 90		     | 64		   |
+
+This work is intended to inform researchers in Computational Social Science a simple way to improve the performance of transformer based models. We find that training PCA on transformer representations using the domain data improves the model performance overall, with evidence of handling longer sequences better than other reduction methods.
+The table above presents a summary of systematic experiments, recommmending the number of dimensions required for given number of samples in each task domain to achieve the best performance.
