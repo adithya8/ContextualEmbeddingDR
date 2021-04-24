@@ -1,0 +1,17 @@
+FILE INFO:
+
+domain_pretraining.sh: This script pretrains the user embeddings from the domain table and applies this learnt reduction to transform the train-test table provided.
+The script takes in the reduction method, the reduction size along with the domain embeddings table and train-test embeddings table names.
+
+task_traintest.sh: This script takes in the reduced train-test table embeddings name along with the outcomes and whether it is a regression or a classification flag. 
+This performs the training and testing.
+
+results_formatter.py: This script takes in a txt file [output of DLATK after train and test] and creates a csv of the results.
+It also takes in the metric to be searched for. 
+
+cmd_logs/pretraining_logs_%d.txt: This file contains the command logs to execute for the pretrainig of reduction on a particular domain, train-test table pairs.
+Example - To execute RPCA of BERT embeddings of CLP18: eval "$(eval "$(sed -n '1,7p' < ~/NLP/ContextualEmbeddingDR3/pretraining_logs_18.txt)")"
+
+cmd_logs/traintest_logs_%d.txt: Similar to the above, this contains the log for training and testing procedure of tasks.
+Example - To collect results for a11_bsag_total and cntrl_gender in CLP18: eval "$(eval "$(sed -n '1,15p' < ~/NLP/ContextualEmbeddingDR3/traintest_logs_18.txt)")"
+
