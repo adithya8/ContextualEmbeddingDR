@@ -49,6 +49,7 @@ This command would store the evaluation result for the ten runs in output.txt.
 For classification task the commands have a slight variation. The outcomes fag is changed to appropriate categorical column name. The `--train_reg` and `--predict_reg` are changed to `--train_classifiers` and `--predict_classifiers` respectively. 
 
 ----
+### **Training sample size Vs Number of dimensions required**
 
 | Number of training samples | Demographic Tasks | Personality Tasks | Mental Health Tasks |
 | -------------------------- | :---------------: | :---------------: | :-----------------: |
@@ -60,3 +61,15 @@ For classification task the commands have a slight variation. The outcomes fag i
 
 This work is intended to inform researchers in Computational Social Science a simple way to improve the performance of transformer based models. We find that training PCA on transformer representations using the domain data improves the model performance overall, with evidence of handling longer sequences better than other reduction methods.
 The table above presents a summary of systematic experiments, recommmending the number of dimensions required for given number of samples in each task domain to achieve the best performance.
+
+---
+
+You can cite our work with:
+	
+	@article{vganesan2021empirical,
+	title={Empirical Evaluation of Pre-trained Transformers for Human-Level NLP: The Role of Sample Size and Dimensionality},
+	author={V Ganesan, Adithya and Matero, Matthew and Ravula, Aravind Reddy and Vu, Huy and Schwartz, H. Andrew},
+	year={2021},
+	booktitle={NAACL-HLT}
+	}
+
