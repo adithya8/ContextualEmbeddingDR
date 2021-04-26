@@ -17,7 +17,8 @@ Here is an example showing how:
 
 If the user embeddings have been generated using [DLATK](https://github.com/DLATK/DLATK/) by following the commands [here](https://github.com/adithya8/ContextualEmbeddingDR#commands-to-extract-dimension-reduced-tables-using-a-specific-method), then you can use these pickle files directly by using the following command:
 
-	python dlatkInterface.py -d {database-name} -t {table-name} -g {group-name} -f {user-embeddings-table-name} --transform_to_feats {dimred-table-name} --load --pickle {path-to-pickle-file}
+	python dlatkInterface.py -d {database-name} -t {table-name} -g {group-name} -f {user-embeddings-table-name} \
+	--transform_to_feats {dimred-table-name} --load --pickle {path-to-pickle-file}
 
 
 ### **Using CSVs through python**
