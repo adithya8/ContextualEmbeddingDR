@@ -11,7 +11,7 @@ Here is an example showing how:
 	with open("model.pickle", "rb") as f:
 		model = pickle.load(f)["clusterModels"]["noOutcome"]
 	#user embeddings are stored in a variable calles user_emb
-	user_emb = model.transform(user_emb)
+	transformed_user_emb = model.transform(user_emb)
 
 ### **Using pickle files through DLATK**
 
@@ -20,3 +20,11 @@ If the user embeddings have been generated using [DLATK](https://github.com/DLAT
 	python dlatkInterface.py -d {database-name} -t {table-name} -g {group-name} -f {user-embeddings-table-name} --transform_to_feats {dimred-table-name} --load --pickle {path-to-pickle-file}
 
 
+### **Using CSVs through python**
+
+If you are using the CSVs, here is an example for how to use it:
+
+	import numpy as np
+	model = np.loadtxt("model.csv", delimiter=",")
+	#shape of model: (x, 768)
+	transformed_user_emb = np.dot(user_emb, model.T)
