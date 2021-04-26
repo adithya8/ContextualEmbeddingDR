@@ -1,7 +1,5 @@
 ## **Model Usage**
 
----
-
 ### **Using pickle files through python**
 
 These pickle files are composed of a sckit learn decomposition class. Hence, to apply the learnt reduction, you can unpickle the model and run transform() method on the user embeddings.
@@ -32,8 +30,6 @@ If you are using the CSVs, here is an example for how to use it:
 
 
 ## **Model Description**
-
----
 
 The models made available are pre-trained to reduce 768 dimensions of roberta-base using 3 datasets from different domains: Facebook (D_20), CLPsych 2019 (D_19), and CLPsych 2018 (D_18).
 D_20 dataset contains facebook posts of 55k users, while the D_19 has reddit posts from 496 users on r/SuicideWatch and D_18 contains essays written by approx 10k children. To know more about these datasets, refer to Section 3 in our paper.
