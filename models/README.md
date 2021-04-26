@@ -1,4 +1,4 @@
-## **Model usage**
+## **Model Usage**
 
 ---
 
@@ -29,3 +29,21 @@ If you are using the CSVs, here is an example for how to use it:
 	model = np.loadtxt("model.csv", delimiter=",")
 	#shape of model: (x, 768)
 	transformed_user_emb = np.dot(user_emb, model.T)
+
+
+## **Model Description**
+
+---
+
+The models made available are pre-trained to reduce 768 dimensions of roberta-base using 3 datasets from different domains: Facebook (D_20), CLPsych 2019 (D_19), and CLPsych 2018 (D_18).
+D_20 dataset contains facebook posts of 55k users, while the D_19 has reddit posts from 496 users on r/SuicideWatch and D_18 contains essays written by approx 10k children. To know more about these datasets, refer to Section 3 in our paper.
+
+Model files have been named by following this nomenclature: {method}_{embedding}_{dimensions}_{dataset}.{extension}
+
+	model: The reduction method
+	embedding: The transformer model used
+	dimensions: Number of reduced dimensions
+	dataset: One of the three identifiers - D_20, D_19 or D_18.
+	extension: csv or pickle
+
+Email us in case you would like to use a model from our paper that is not made available here.  
