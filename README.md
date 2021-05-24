@@ -1,8 +1,12 @@
-# **Empirical Evaluation of Pre-trained Transformers for Human-Level NLP: The Role of Sample Size and Dimensionality**
+# Empirical Evaluation of Pre-trained Transformers for Human-Level NLP: The Role of Sample Size and Dimensionality
+
+**To get transformation matrices to reduce dimensions of RoBERTA please see the [models](models).**
+
+To see examples of running most steps used in the paper. Read on below. 
 
 ---
 
-### **Commands to extract RoBERTa embeddings:**
+### Step 1: Extract Contextual Embeddings: 
 
 The DLATK first requires to tokenize the messages before generating the embeddings: 
 
@@ -17,7 +21,7 @@ table_name = {D_20, T_20}
 
 ----
 
-### **Commands to extract dimension reduced tables using a specific method:**
+### Step 2: Run pre-trained dimension reduction tables using a specific method:
 
 The DLATK command to extract the dimension reduction is done in two steps as explained in the report. The first step involved learning the reduction on the domain data and storing the learnt model in a pickle file:
 
@@ -27,7 +31,7 @@ The DLATK command to extract the dimension reduction is done in two steps as exp
 
 The number of dimensions to reduce to (components) can be changed by altering the argument of `--k`
 
-The dimred_model here could be `pca, nmf, fa, ae` (for non linear auto-encoders). For ae, it is expected to prefix the command with CUDA_VISIBLE_DEVICES env variable to specify GPU.  
+The `{dimred_model}` here could be `pca, nmf, fa, ae` (for non linear auto-encoders). For ae, it is expected to prefix the command with CUDA_VISIBLE_DEVICES env variable to specify GPU.  
 
 The second step would be applying this learnt reduction model on the task data to generate the reduced representations.
 
@@ -39,7 +43,7 @@ The name of the table to stored the dimension reduced representations is given i
 
 -----
 
-### **Commands to perform bootstrapped training and evaluation:**
+### Step 3: Perform bootstrapped training and evaluation:
 
 The commands to perform bootstrapped training followed by evaluation for regression task is given by:
 
@@ -60,7 +64,7 @@ This command would store the evaluation result for the ten runs in output.txt.
 For classification task the commands have a slight variation. The outcomes fag is changed to appropriate categorical column name. The `--train_reg` and `--predict_reg` are changed to `--train_classifiers` and `--predict_classifiers` respectively. 
 
 ----
-### **Training sample size Vs Number of dimensions required**
+## Results: Training sample size Vs Number of dimensions required
 
 | Number of training samples | Demographic Tasks | Personality Tasks | Mental Health Tasks |
 | -------------------------- | :---------------: | :---------------: | :-----------------: |
