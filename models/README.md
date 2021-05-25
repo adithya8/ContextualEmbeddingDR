@@ -42,7 +42,6 @@ def transform(user_emb):
 	#   user_emb: numpy matrix of N_observations X 768  -- matrix of average RoBERTA layer 11 per user. 
 	#output:
 	#   transformed_user_emb: numpy matrix of N_observations X P -- low dimensional user representation. 
-
 	import numpy as np
 	scalar = np.loadtxt("scalar.csv", delimiter=",")
 	#shape: (2, 768); 1st row -> mean; 2nd row -> std
