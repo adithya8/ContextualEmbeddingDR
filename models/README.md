@@ -30,11 +30,11 @@ There are two steps to applying the models:
 
 All models assume you have an input matrix of `N_observations X 768`, where `N_observations` is the training set size. The goal is produce `N_obsevations X K` output where `K` is the lower dimensional represetnation from the model. 
 
-*Aggregating to user-level.* In many situations, one has multiple documents/posts/messages per individual. 
+*Aggregating to user-level.* In many situations, one has multiple documents/posts/messages per individual. To form user representation, the message representations of each user is averaged. 
 
 ### Using CSVs through python
 
-Here is an example for how to use the CSV:
+Here is an example for how to use the models in CSV format:
 
 ```py
 def transform(user_emb):
