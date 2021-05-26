@@ -2,7 +2,7 @@
 
 **To get transformation matrices to reduce dimensions of RoBERTA please see the [models](models).**
 
-To see examples of running most steps used in the paper. Read on below. 
+To see examples of running steps used in the paper. Read on below. 
 
 ---
 
