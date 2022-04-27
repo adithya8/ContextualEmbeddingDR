@@ -1,6 +1,6 @@
 # Empirical Evaluation of Pre-trained Transformers for Human-Level NLP: The Role of Sample Size and Dimensionality
 
-**To get transformation matrices to reduce dimensions of RoBERTA please see the [models](models).**
+**To get low dimensional RoBERTA representations, see our [blog post](https://adithya8.github.io/blog/paper/2021/04/15/Empirical-Evaluation.html) or the [models](models) section.**
 
 To see examples of running steps used in the paper. Read on below. 
 
