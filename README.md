@@ -1,6 +1,6 @@
 # Empirical Evaluation of Pre-trained Transformers for Human-Level NLP: The Role of Sample Size and Dimensionality
 
-**To get low dimensional RoBERTA representations, see our [blog post](https://adithya8.github.io/blog/paper/2021/04/15/Empirical-Evaluation.html) or the [models](models) section.**
+**To get low dimensional RoBERTA representations, see our [blog post](https://adithya8.github.io/blog/paper/2021/04/15/Empirical-Evaluation.html) or the [models](models) section. The paper and the talk is on [ACL anthology](https://aclanthology.org/2021.naacl-main.357/)**
 
 To see examples of running steps used in the paper. Read on below. 
 
@@ -87,7 +87,7 @@ You can cite our work with:
         booktitle = "Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
         month = jun,
         year = "2021",
-        address = "Bangkok, Thailand",
+        address = "Online",
         publisher = "Association for Computational Linguistics",
         url = "aclanthology.org/2021.naacl-main.357/",
         pages = "4515--4532"}
